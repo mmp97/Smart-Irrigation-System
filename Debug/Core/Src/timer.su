@@ -1,6 +1,7 @@
 timer.c:16:6:MX_TIM10_Init	16	static
 timer.c:48:6:MX_TIM11_Init	16	static
-timer.c:81:6:delay	16	static
-timer.c:87:6:MX_RTC_Init	32	static
-timer.c:143:6:set_time	32	static
-timer.c:167:6:get_time	40	static
+timer.c:86:6:MX_TIM13_Init	8	static
+timer.c:112:6:delay	16	static
+timer.c:118:6:MX_RTC_Init	32	static
+timer.c:174:6:set_time	32	static
+timer.c:198:6:get_time	40	static

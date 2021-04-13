@@ -1,3 +1,3 @@
-bluetooth.c:38:6:UART1_GPIO_CFG	40	static
-bluetooth.c:56:6:NVIC_Configuration	8	static
-bluetooth.c:63:6:UART1_IRQHandler	8	static
+bluetooth.c:18:6:UART1_GPIO_CFG	40	static
+bluetooth.c:36:6:NVIC_Configuration	8	static
+bluetooth.c:43:6:UART1_IRQHandler	8	static

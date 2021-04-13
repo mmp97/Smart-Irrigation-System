@@ -34,24 +34,24 @@ endif
 
 # Add inputs and outputs from these tool invocations to the build variables 
 EXECUTABLES += \
-Treasure_Planet.elf \
+Smart_Irrigation_System.elf \
 
 SIZE_OUTPUT += \
 default.size.stdout \
 
 OBJDUMP_LIST += \
-Treasure_Planet.list \
+Smart_Irrigation_System.list \
 
 OBJCOPY_BIN += \
-Treasure_Planet.bin \
+Smart_Irrigation_System.bin \
 
 
 # All Target
-all: Treasure_Planet.elf secondary-outputs
+all: Smart_Irrigation_System.elf secondary-outputs
 
 # Tool invocations
-Treasure_Planet.elf: $(OBJS) $(USER_OBJS) /home/micael/Documents/Programs/Microcontrollers/STM32/Treasure_Planet/STM32F446RETX_FLASH.ld
-	arm-none-eabi-gcc -o "Treasure_Planet.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"/home/micael/Documents/Programs/Microcontrollers/STM32/Treasure_Planet/STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Treasure_Planet.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Smart_Irrigation_System.elf: $(OBJS) $(USER_OBJS) /home/micael/Documents/Programs/Microcontrollers/STM32/Smart_Irrigation_System/STM32F446RETX_FLASH.ld
+	arm-none-eabi-gcc -o "Smart_Irrigation_System.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"/home/micael/Documents/Programs/Microcontrollers/STM32/Smart_Irrigation_System/STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Smart_Irrigation_System.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
@@ -60,13 +60,13 @@ default.size.stdout: $(EXECUTABLES)
 	@echo 'Finished building: $@'
 	@echo ' '
 
-Treasure_Planet.list: $(EXECUTABLES)
-	arm-none-eabi-objdump -h -S $(EXECUTABLES) > "Treasure_Planet.list"
+Smart_Irrigation_System.list: $(EXECUTABLES)
+	arm-none-eabi-objdump -h -S $(EXECUTABLES) > "Smart_Irrigation_System.list"
 	@echo 'Finished building: $@'
 	@echo ' '
 
-Treasure_Planet.bin: $(EXECUTABLES)
-	arm-none-eabi-objcopy  -O binary $(EXECUTABLES) "Treasure_Planet.bin"
+Smart_Irrigation_System.bin: $(EXECUTABLES)
+	arm-none-eabi-objcopy  -O binary $(EXECUTABLES) "Smart_Irrigation_System.bin"
 	@echo 'Finished building: $@'
 	@echo ' '
 

@@ -13,6 +13,7 @@
 
 void MX_TIM10_Init(void);
 void MX_TIM11_Init(void);
+void MX_TIM13_Init(void);
 void MX_RTC_Init(void);
 void delay(uint32_t time);
 
@@ -21,6 +22,8 @@ void set_time(void);
 
 TIM_HandleTypeDef htim10;
 TIM_HandleTypeDef htim11;
+TIM_HandleTypeDef htim13;
+
 
 RTC_HandleTypeDef hrtc;
 
